@@ -98,8 +98,8 @@
 		1B290B1223459293004C40FC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B290B14234594F2004C40FC /* EntryDetailViewController.swift */,
 				1B290B0E23459272004C40FC /* EntriesTableViewController.swift */,
+				1B290B14234594F2004C40FC /* EntryDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
