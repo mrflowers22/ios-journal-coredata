@@ -10,7 +10,11 @@ import UIKit
 
 class EntryDetailViewController: UIViewController {
 
-    var entry: Entry?
+    var entry: Entry?{
+        didSet {
+            updateViews()
+        }
+    }
     var entryController: EntryController?
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -18,12 +22,33 @@ class EntryDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateViews()
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        guard let entryController = entryController, let title = titleTextField.text, !title.isEmpty, let  body = bodyTextView.text, !body.isEmpty else {
+            print("Error unwrapping entrycontroller")
+            return
+        }
+        
+        if let passedInEntry = entry {
+            //update
+            entryController.update(entry: passedInEntry, withTitle: title, andBodyText: body)
+        } else {
+            //create
+            entryController.createEntryWith(title: title, bodyText: body)
+        }
+        self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
-    
+    private func updateViews(){
+        guard let passedInEntry = entry, isViewLoaded else {
+            self.title = "Please create an Entry."
+            return }
+        self.title = passedInEntry.title
+        titleTextField.text = passedInEntry.title
+        bodyTextView.text = passedInEntry.bodyText
+    }
 
 }
