@@ -12,10 +12,15 @@ class EntryDetailViewController: UIViewController {
 
     var entry: Entry?{
         didSet {
+            print("entry set in  detail")
             updateViews()
         }
     }
-    var entryController: EntryController?
+    var entryController: EntryController? {
+        didSet {
+            print("Entry controller set in detial")
+        }
+    }
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
@@ -26,7 +31,10 @@ class EntryDetailViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        guard let entryController = entryController, let title = titleTextField.text, !title.isEmpty, let  body = bodyTextView.text, !body.isEmpty else {
+        print("this is the ec: \(entryController)")
+        guard let entryController = entryController,
+            let title = titleTextField.text, !title.isEmpty,
+            let  body = bodyTextView.text, !body.isEmpty else {
             print("Error unwrapping entrycontroller")
             return
         }

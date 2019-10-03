@@ -54,10 +54,22 @@ class EntriesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("inside the segue")
+        
         if segue.identifier == "cellSegue" {
-            guard let destination = segue.destination as? EntryDetailViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let destination = segue.destination as? EntryDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+                print("Error in the segue guard statement")
+                return }
             let entryToPass = entryController.entries[indexPath.row]
+            destination.entryController = entryController
+            print("table view entry controller: \(entryController)")
             destination.entry = entryToPass
+        } else if segue.identifier == "addButtonSegue" {
+            guard let destination = segue.destination as? EntryDetailViewController else {
+                print("Error in the addButton segue guard statement")
+                return }
+        
+            destination.entryController = entryController
         }
     }
    
