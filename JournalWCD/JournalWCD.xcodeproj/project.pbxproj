@@ -11,6 +11,8 @@
 		1B290B0023459142004C40FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B290AFE23459142004C40FC /* Main.storyboard */; };
 		1B290B0223459142004C40FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B290B0123459142004C40FC /* Assets.xcassets */; };
 		1B290B0523459142004C40FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B290B0323459142004C40FC /* LaunchScreen.storyboard */; };
+		1B290B0F23459272004C40FC /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B290B0E23459272004C40FC /* EntriesTableViewController.swift */; };
+		1B290B1123459287004C40FC /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B290B1023459287004C40FC /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		1B290B0123459142004C40FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B290B0423459142004C40FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B290B0623459142004C40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B290B0E23459272004C40FC /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		1B290B1023459287004C40FC /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				1B290B0D2345918E004C40FC /* Storyboard */,
 				1B290B0C2345917D004C40FC /* Resources */,
+				1B290B1223459293004C40FC /* View Controllers */,
+				1B290B132345929E004C40FC /* Table  View Cells */,
 			);
 			path = JournalWCD;
 			sourceTree = "<group>";
@@ -75,6 +81,22 @@
 				1B290AFE23459142004C40FC /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1B290B1223459293004C40FC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B290B0E23459272004C40FC /* EntriesTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1B290B132345929E004C40FC /* Table  View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B290B1023459287004C40FC /* EntryTableViewCell.swift */,
+			);
+			path = "Table  View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B290B1123459287004C40FC /* EntryTableViewCell.swift in Sources */,
+				1B290B0F23459272004C40FC /* EntriesTableViewController.swift in Sources */,
 				1B290AFB23459142004C40FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
