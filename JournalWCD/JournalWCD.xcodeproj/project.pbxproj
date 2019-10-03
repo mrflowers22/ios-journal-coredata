@@ -13,6 +13,7 @@
 		1B290B0523459142004C40FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B290B0323459142004C40FC /* LaunchScreen.storyboard */; };
 		1B290B0F23459272004C40FC /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B290B0E23459272004C40FC /* EntriesTableViewController.swift */; };
 		1B290B1123459287004C40FC /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B290B1023459287004C40FC /* EntryTableViewCell.swift */; };
+		1B290B15234594F2004C40FC /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B290B14234594F2004C40FC /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B290B0623459142004C40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B290B0E23459272004C40FC /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
 		1B290B1023459287004C40FC /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		1B290B14234594F2004C40FC /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		1B290B1223459293004C40FC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1B290B14234594F2004C40FC /* EntryDetailViewController.swift */,
 				1B290B0E23459272004C40FC /* EntriesTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -172,6 +175,7 @@
 			files = (
 				1B290B1123459287004C40FC /* EntryTableViewCell.swift in Sources */,
 				1B290B0F23459272004C40FC /* EntriesTableViewController.swift in Sources */,
+				1B290B15234594F2004C40FC /* EntryDetailViewController.swift in Sources */,
 				1B290AFB23459142004C40FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

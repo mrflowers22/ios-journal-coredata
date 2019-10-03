@@ -87,16 +87,54 @@
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="200.89285714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="ASW-aW-4Jh">
             <objects>
-                <viewController id="tzA-GF-Phf" sceneMemberID="viewController">
+                <viewController id="tzA-GF-Phf" customClass="EntryDetailViewController" customModule="JournalWCD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NEc-YE-8Vj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yq4-2Y-qOs">
+                                <rect key="frame" x="8" y="148" width="398" height="300"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZ3-RH-9dc">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CFO-Hh-Q3Q">
+                                        <rect key="frame" x="0.0" y="38" width="398" height="262"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="gef-9M-s84"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yq4-2Y-qOs" firstAttribute="top" secondItem="JEC-X6-zQY" secondAttribute="top" constant="8" id="ZbT-Vn-PIb"/>
+                            <constraint firstItem="Yq4-2Y-qOs" firstAttribute="leading" secondItem="JEC-X6-zQY" secondAttribute="leading" constant="8" id="ovT-9D-amh"/>
+                            <constraint firstItem="JEC-X6-zQY" firstAttribute="trailing" secondItem="Yq4-2Y-qOs" secondAttribute="trailing" constant="8" id="vOf-0w-m0F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JEC-X6-zQY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="q4E-y8-c8D">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="DWb-D2-TGz">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="tzA-GF-Phf" id="rj6-LX-f9n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="CFO-Hh-Q3Q" id="NUy-JM-WdV"/>
+                        <outlet property="titleTextField" destination="sZ3-RH-9dc" id="bEI-fo-v1y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qrp-cW-ZC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
