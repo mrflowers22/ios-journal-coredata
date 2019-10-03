@@ -10,18 +10,27 @@ import UIKit
 
 class EntryTableViewCell: UITableViewCell {
 
+    var entry: Entry? {
+        didSet {
+            updateViews()
+        }
+    }
+    lazy var formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextlabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+ 
+    private func updateViews(){
+        guard let passedInEntry = entry, let date = passedInEntry.timestamp else { return }
+        titleLabel.text = passedInEntry.title
+        bodyTextlabel.text = passedInEntry.bodyText
+        timestampLabel.text = formatter.string(from: date)
     }
 
 }
